@@ -46,7 +46,7 @@ For organizational histories:
 * Name(s) of chief officers
 * Other significant information
 
-Some of this information may also be found in the relevant Agent record. If it is not, you may wish to copy it into its biographical/historical note, as detailed in [the Agent record guidelines](agents.md).
+Some of this information may also be found in the relevant Agent record. If it is not, you may wish to copy it into its biographical/historical note.
 
 Do not include the following types of information in the Biographical/Historical note. Instead, record where indicated below:
 
