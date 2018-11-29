@@ -23,8 +23,6 @@ gaaccount: ''
 permalink: /:year/:month/:title
 
 highlighter: rouge
-markdown: redcarpet
-redcarpet:
-  extensions: ["tables", "with_toc_data"]
+markdown: kramdown
 
 exclude: ['README.md', 'LICENSE']
