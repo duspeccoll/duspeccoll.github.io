@@ -1,0 +1,40 @@
+- name: "Basic Information: Authority ID"
+  description: The Uniform Resource Identifier uniquely identifying the subject heading described.
+  required: true
+  rules: Required if establishing against an existing authority file; if the source is local, the Authority ID is not required.
+  key: "subject.authority_id"
+
+- name: "Basic Information: Source"
+  description: The origin of the provided description for the subject heading.
+  required: true
+  rules: Select from the drop-down list.
+  key: "subject.source"
+
+- name: "Basic Information: Scope Note"
+  description: The range of materials which are to be covered by the subject heading, or the definition of the heading.
+  required: false
+  rules: "Drawn from existing authority files or provided locally by a Metadata Technician. The Scope Note may be used to provide alternative forms of a given heading, in order to allow those forms to be indexed and used in search results. For example, in the heading for <a href=\"https://duarchstaff.coalliance.org/subjects/2311\">Shehitah</a>, we provide the following scope note:<br/><br/>\"Use for: Schachet, Shechita, Shechitah, Shehita, Shochet, Shohet, Slaughtering and slaughter-houses–Jews\"<br /><br />This allows these terms to be indexed in ArchivesSpace alongside the authorized heading, in spite of the lack of thesaurus functionality in ArchivesSpace. Keyword searches for these alternative transliterations will bring up records to which the 'Shehitah' heading has been linked."
+  key: "subject.scope_note"
+
+- name: "Terms and Subdivisions: Term"
+  description: The label applied to a term used in a subject heading.
+  required: true
+  rules: "Terms and Subdivisions constitute the subject heading itself. In most cases only one will be required; however, if creating or working with coordinated subject headings, you may require multiple terms on a single subject heading, as in the case of <a href=\"https://duarchstaff.coalliance.org/subjects/3228\">Ski resorts -- Colorado</a>. When creating subject headings with more than one term or subdivision, the terms will index and display in the order in which they are saved in the ArchivesSpace record."
+  key: "term.term"
+
+- name: "Terms and Subdivisions: Type"
+  description: The specific category of term being applied within a subject heading.
+  required: true
+  rules: Select from the drop-down list.
+  key: "term.term_type"
+
+- name: "External Documents: Title"
+  description: The label applied to a link outside of ArchivesSpace to material providing additional context about the subject heading.
+  required: false
+  rules: External Documents are used in ArchivesSpace to provide links to outside resource which may be helpful to a user in learning more about that resource. For subject headings, they may assist an archivist in determining whether to apply a particular subject heading to an archival resource or aggregate record.
+  key: "external_document.title"
+
+- name: "External Documents: Location"
+  description: "The place where an external document may be found. Generally this is a URL for a website."
+  required: false
+  key: "external_document.location"

@@ -1,0 +1,47 @@
+- name: Title
+  description: The name of the resource being described.
+  required: true
+  rules: Auto-populated from the linked Archival Object
+  key: "digital_object.title"
+
+- name: Digital Object ID
+  description: The unique identifier for the resource being described.
+  required: true
+  rules: When ingested to Digital Collections DU, the handle of the digital object; when not yet ingested, the path to the object on the shared drive or SFTP server
+  key: "digital_object.digital_object_id"
+
+- name: Publish
+  description: Switch for publishing the record in the public user interface
+  required: false
+  rules: Ensure this box is checked if you wish for the record to appear in the public user interface
+  key: "digital_object.publish"
+
+- name: File Versions
+  description: Files constituting the resource
+  required: true
+  rules: "Each Digital Object must contain at least one file. This is to ensure we have a complete inventory of files that have been digitized.<br /><br />If a Digital Object is compound (i.e. contains more than one file), use one File Version for each constituent file in the compound object. The <a href=\"https://github.com/duspeccoll/ao_mods\">MODS Export</a> plugin looks for Digital Objects with more than one File Version and exports one <code class=\"highlighter-rouge\">&lt;part&gt;</code> element for each. Digital Collections DU uses this metadata to determine when to use Compound Object viewers."
+  key: "digital_object.file_versions"
+
+- name: "File Versions: File URI"
+  description: The name provided to the constituent file.
+  required: true
+  rules: Enter the file name as-is (no repository, SFTP, or shared drive paths).
+  key: "file_version.file_uri"
+
+- name: "File Versions: File Format Name"
+  description: The MIME type of the constituent file.
+  required: false
+  rules: Select from the drop-down list.
+  key: "file_version.file_format_name"
+
+- name: "File Versions: Caption"
+  description: A description of the file itself, used to indicate the view depicted or its order in a sequence.
+  required: true
+  rules: Required if the Digital Object has more than one file; otherwise optional.
+  key: "file_version.caption"
+
+- name: "User Defined: MODS Digital Origin"
+  description: The means by which the object came to be in its represented digital form.
+  required: true
+  rules: "Select from the drop-down list. Values are from the <a href=\"http://www.loc.gov/standards/mods/v3/mods-userguide-elements.html#digitalorigin\">Library of Congress MODS specifications</a>."
+  key: "user_defined.enum_2"

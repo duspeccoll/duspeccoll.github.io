@@ -1,0 +1,35 @@
+- name: Label
+  description: The type of event related to the collection for which dates are pertinent. This field is required.
+  required: true
+  rules: Select from the drop-down list.
+  key: "date.label"
+
+- name: Expression
+  description: A free-text representation of the date being encoded.
+  required: true
+  rules: "ArchivesSpace uses this field to generate dates for export of metadata into other formats, e.g. for &lt;unitdate&gt; in EAD, or for 245$f in MARC.<br /><br />Give the date of the subject matter/content in the collection, rather than the date of creation of the physical objects contained within (photocopies, digital surrogates, halftone reproductions, etc.).<br /><br />If the material being described is a reproduction, record the details about the reproduction, including the date(s) of reproduction, if known, in Scope and Content.<br /><br />Always record the earliest and latest dates of the subject matter in question; the span date. Format dates as necessary based on the formatting of the date field within the collections management database."
+  key: "date.expression"
+
+- name: Type
+  description: "The type of date being encoded: single, bulk, or inclusive."
+  required: true
+  rules: "Select from the drop-down list. This field governs which machine-readable date fields are made available to the user in this sub-form: a 'Single' type will allow only for a 'Begin' field, while the other two options will allow for both 'Begin' and 'End' fields.<br /><br />In addition to its use in future faceted browsing applications in the ArchivesSpace PUI, the MARC exporter uses the 'Begin' and 'End' dates when populating control fields, so it is important to use both the human- and machine-readable date expressions."
+  key: "date.date_type"
+
+- name: Begin
+  description: The single date provided when the date type is singular, or the first date in the range when the date type is bulk or inclusive.
+  required: true
+  rules: Dates are encoded as YYYY, YYYY-MM, or YYYY-MM-DD.
+  key: "date.begin"
+
+- name: End
+  description: The last date in the range when the date type is bulk or inclusive.
+  required: true
+  rules: Dates are encoded as YYYY, YYYY-MM, or YYYY-MM-DD.
+  key: "date.end"
+
+- name: Certainty
+  description: The level of confidence for the information given in a date statement.
+  required: false
+  rules: If you are uncertain about a date, you may choose an option from the drop-down list provided to indicate the level of uncertainty.
+  key: "date.certainty"

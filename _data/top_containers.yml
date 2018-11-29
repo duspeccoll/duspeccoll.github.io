@@ -1,0 +1,66 @@
+- name: Container Profile
+  description: The type of container represented by the Top Container record.
+  required: true
+  rules: Select using the linker.
+  example: Guidelines for Container Profiles may be found <a href="../container_profiles">here</a>.
+  key: "top_container.container_profile"
+
+- name: Container Type
+  description: The high-level type of container being described.
+  required: false
+  rules: Select from the drop-down list.
+  key: "top_container.type"
+
+- name: Indicator
+  description: The local call number assigned to the container in order to identify it in the context of its collection.
+  required: true
+  rules: "Assigned according to Special Collections and Archives call numbering conventions, detailed <a href=\"../arrangement\">here</a>."
+  key: "top_container.indicator"
+
+- name: Barcode
+  description: The barcode affixed to the Top Container being described.
+  required: true
+  rules: Scan or key in the barcode after affixing it to the box, crate, or object you are describing.
+  key: "top_container.barcode"
+
+- name: ILS Holding ID
+  description: The holdings ID for the resource/location combination to which the Top Container is being assigned.
+  required: false
+  rules: In the library management system, holdings are location- and collection-specific; a holdings identifier will be unique to the items held for a particular bibliographic resource at a particular location. You may find the holdings ID for a Top Container by looking up the holdings for a Resource in Alma and cross-referencing this against the holdings location for the Top Container in ArchivesSpace.
+  key: "top_container.ils_holding_id"
+
+- name: Locations
+  description: The current or past location at which a Top Container is or has been housed.
+  required: true
+  rules: A Top Container may have more than one Location in ArchivesSpace. No more than one Location may have a Status of "Current"; any others must be "Previous." We do not typically record previous locations of a top container at this time.
+  key: "top_container.container_locations"
+
+- name: "Locations: Status"
+  description: Whether the location is current or previous.
+  required: true
+  rules: Should always be "Current."
+  key: "container_location.status"
+
+- name: "Locations: Start Date"
+  description: The date on which the Top Container began to be housed at the linked location.
+  required: true
+  rules: If you are unsure, use the current date.
+  key: "container_location.start_date"
+
+- name: "Locations: End Date"
+  description: The date on which the Top Container ceased to be housed at the linked location.
+  required: false
+  rules: Used for Previous locations to indicate the date when the Top Container was moved from that location.
+  key: "container_location.end_date"
+
+- name: "Locations: Note"
+  description: Any additional information about the Top Container's status at the linked location.
+  required: false
+  rules: May be used to indicate the present location of the Top Container, if it is different from the linked location, and if the material was not circulated on Work Order to a department in Alma.
+  key: "container_location.note"
+
+- name: "Locations: Location"
+  description: The specific linked location. References the 'location' data model.
+  required: true
+  rules: "If the material is located at the Hampden Center, use the 'hscol' location. If the material is missing, use the 'missing' location. Otherwise, locations are shelf-specific within the AAC 102 closed stacks; use the coordinate provided on the physical shelving in the closed stacks when indicating a location for ps* materials (including the general stacks, map drawers, folio shelving, or oversize shelving)."
+  key: "container_location.ref"

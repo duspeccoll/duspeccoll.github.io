@@ -1,0 +1,141 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding-bottom: 1rem;
+  min-height: 100%;
+}
+
+@media (max-width: 480px) {
+  .navbar-title {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 800px) {
+  .navbar-brand > img {
+    display: none;
+  }
+
+  .page-container > p > img {
+    width: 100%;
+  }
+}
+
+.page-container { padding: 1rem; }
+
+.page-container > p > img {
+  display: block;
+  border: solid 1px #999;
+  margin: auto;
+  max-width: 860px;
+}
+
+.navbar {
+	background-color: #8b2332;
+  color: #fff;
+  width: 100%;
+  height: 75px;
+}
+
+.navbar-brand > img {
+  height: 100%;
+  width: auto;
+  padding-right: 10px;
+}
+
+.navbar-brand {
+  padding: 10px 10px;
+  line-height: 30px;
+  color: #fff;
+}
+
+.navbar-collapse { background-color: #8b2332; }
+
+.navbar-nav .nav-link {
+  color: #fff;
+  background-color: #8b2332;
+}
+
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+  margin-left: 0;
+}
+
+.breadcrumb { font-size: 0.8rem; }
+
+.copyright { color: #fff; }
+
+blockquote {
+  border-left: solid .25em #dfe2e5;
+  color: #6a737d;
+  padding: 0 1em;
+  margin-left: 1em;
+  font-size: 0.9em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+}
+
+thead > tr > th {
+  background: #F0F0F0 center right no-repeat;
+}
+
+thead > tr > th > p { font-weight: bold; }
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 7px 10px;
+  vertical-align: top;
+  text-align: left;
+}
+
+td > ul { margin-bottom: 0; }
+
+.footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+	background-color: #b0a689;
+}
+
+.footer a { color: #8b2332; }
+
+.copyright {
+  margin-bottom: 0;
+  padding: 5px 0;
+}
+
+.manual-img {
+  display: block;
+  margin: 0.5rem auto;
+  width: 50%;
+  border: solid 1px #000;
+}
+
+.table-fields {
+  width: 80%;
+  display: block;
+  left: 0;
+  margin-bottom: 10px;
+}
+
+.table-field { background-color: #e0f0ff; }
+
+.form-group.required { font-weight: bold; }
+
+.form-group.required .control-label:after {
+  content:" *";
+  color:red;
+}

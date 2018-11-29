@@ -1,0 +1,91 @@
+- name: Abstract
+  description: A concise summary of the key points of a larger work, often used to assist the reader in determining if that work is likely to be of use. This field is required at the resource/collection level, and optional at all other levels, though we do recommend that it be populated at the item level.
+  required: true
+  rules: Create a brief summary of the materials being described, including bits of biographical or historical information about the creator and abridged statements about the scope, content, or other descriptive details about the arrangement, archival unit or one of its components, when appropriate.
+  example: "<p><ul><li>Dorothy \"Dokes\" Kobey was born in Aspen, Colorado in 1905. Her father and his brothers owned stores in Aspen, including the Kobey Shoe and Clothing Company. The Kobey families were among the dozen or so Jewish families in the close-knit mining town of Aspen when Dokes Kobey was growing up. Dorothy Kobey moved to Denver in 1924 and in 1927 she married Nathan Berry. This collection documents a prominent Jewish family and life in Aspen, Colorado in the early 1900s. The materials include printed materials and photographs about the Kobey family and Aspen, Colorado.</li></ul></p>"
+  key: abstract
+
+- name: Accruals
+  description: Indicates whether any additional materials are expected to be added to an existing collection.
+  required: false
+  rules: Take information from donor agreements, records, and records schedules. Indicate whether or not future accruals are expected. Use DACS 5.4 as content guidelines.
+  example: "<p><ul><li>Further accruals are expected.</li><li>No further accruals are expected.</li></ul></p>"
+  key: accruals
+
+- name: Arrangement
+  description: Notes on the physical or intellectual arrangement of a collection, series, or container.
+  required: false
+  rules: "<p>Arrangement is influenced by original order, chronology, topic, format, and other factors.  Derive the information from the materials themselves. In general, collections are arranged by series, then by storage containers, folders, and/or items. All collections should have at least one series, one container, and one item in theory – even if the series and container information are de facto in nature.</p><p>List the series number, series title and date range in documenting the arrangement and organization of the collection. Reserve more detailed explanations of arrangement for series-level description.</p><p>If the collection has not been arranged, the note should read \"The collection is unarranged.\"</p><p>If the collection is partially arranged, the note should read \"The collection is partially arranged.\"</p>"
+  example: "The records are arranged in four series: 1. Iota Chapter Officers' Files,1987-1993. 2. Iota Chapter Files, 1965-1993. 3. Rush Papers,1940s-1992. 4. Memorabilia, 1930-1997."
+  key: arrangement
+
+- name: "Biographical/Historical"
+  description: The biography of a person or family, or the organizational history of a corporate body.
+  required: false
+  rules: Follow the guidelines below for writing biographical and historical notes.
+  key: bioghist
+
+- name: Custodial History
+  description: Information regarding the origins, custody, and ownership of an item or collection.
+  required: false
+  rules: "<p>Here you would include information about the chain of ownership of the material being described, before they reached the immediate source of acquisition. Both physical possession and intellectual ownership can be described, providing details of changes of ownership and/or custody that are significant for its authenticity, integrity, and interpretation. Some of this information may be found in and copied from the Accession record for the materials.</p><p>To record information about the immediate source of the described materials and the circumstances under with they were received by the repository, use the Immediate Source of Acquisition note.</p>"
+  key: custodhist
+
+- name: General
+  description: Any notes not covered by the types described here.
+  required: false
+  key: odd
+
+- name: Immediate Source of Acquisition
+  description: The means by which Special Collections and Archives directly acquired the materials being described.
+  required: false
+  rules: Document the name of the person(s), organization, or department that created the materials and the circumstances under which they were received, if known.  Include donations, gifts, transfers, etc., and the month and date the materials were received. Information about the provenance or chain of custody beyond the immediate source of acquisition should be recorded in a Custodial History note. If you do not know the immediate source of acquisition, the note should read "Source unknown," or be omitted from the record.
+  example: "<p><ul><li>Transfer from the Department of English, November 2006.</li><li>Gift of Peter H. Dominick, January 1978.</li><li>Source unknown.</li></ul></p>"
+  key: acqinfo
+
+- name: Language of Materials
+  description: A prose statement enumerating the language(s), scripts, and symbol systems employed in the materials being described.
+  required: false
+  rules: This information is required in the Basic Information section of the Resource record. If the language provided is "Multiple languages," a Language of Materials note is required. Use DACS 4.5 as content guidelines.
+  example: "<p><ul><li>Materials entirely in English.</li><li>Materials in English and Yiddish.</li><li>Collection is predominately in German; materials in English are indicated at the file/series level.</li></ul></p>"
+  key: langmaterial
+
+- name: Physical Characteristics and Technical Requirements
+  description: Information about attributes or defects relating to physical materials in a collection that would affect how it may be used, or hardware requirements needed to access the materials (such as a cassette player if oral histories are recorded on cassette tape).
+  required: false
+  key: phystech
+
+- name: Preferred Citation
+  description: Information about how users should identify the described materials when referring to them in published credits.
+  required: false
+  rules: Use DACS 7.1.5 and the citation format provided in the example below as content guidelines.
+  example: "<p><ul><li>William E. Barrett Papers, M014, Special Collections and Archives, University of Denver Libraries, Denver, Colo.</li><li>Joyce Foster Papers, B064, Ira M. Beck and Peryle H. Beck Archives, Special Collections and Archives, University of Denver Libraries and Center for Judaic Studies, University of Denver, Denver, Colo.</li><li>Colorado Dance Festival Photograph Collection, D081, Carson-Brierly Dance Library, University of Denver Libraries, Denver, Colo.</li><li>Rocky Mountain Jewish Historical Society Records, B230, Ira M. Beck and Peryle Hayutin Beck Memorial Archives, Special Collections and Archives, University of Denver Libraries and Center for Judaic Studies, University of Denver, Denver, Colo.</li></ul></p>"
+  key: prefercite
+
+- name: Processing Information
+  description: Information about the creation and revision of archival descriptive records. Record the name(s) of the person(s) who created or revised the description, as well as the creation or revision date (the month and year).
+  required: false
+  rules: Use DACS 8.1 for content guidelines.
+  example: "<p><ul><li>Processed by Marcia Kehl, 2006 January 5.</li><li>Processed by Thyria Wilson, 2005 February 6. Re-processed by Kathy Mitchell, 2006 November 5.</li><li>Processed by Special Collections and Archives Staff, June 2000 to July 2007.</li></ul></p>"
+  key: processinfo
+
+- name: Related Materials
+  description: Information about materials that are not physically or logically included in the material described in the finding aid but that may be of use to a reader because of an association to the described materials.
+  required: false
+  rules: Materials designated by this element are not related to the described material by provenance, accumulation, or use. Use DACS 6.3 for content guidelines.
+  example: "<p><ul><li>Related materials providing visual documentation of University of Denver facilities may be found in the University of Denver Historical Photograph Collection, U201.</li><li>Correspondence between Threlkeld and Jesse Newlon can be found in the Jesse H. Newlon Papers, M013.</li></ul></p>"
+  key: relatedmaterial
+
+- name: Scope and Contents
+  description: A prose statement summarizing the range and topical coverage of the described materials, often mentioning the form of the materials and naming significant organizations, individuals, events, places, and subjects represented.
+  required: false
+  rules: "The purpose of the scope and content element is to assist readers in evaluating the potential relevance of the materials to their research. It may highlight particular strengths of, or gaps in, the described materials. The scope and content note should indicate the types of materials found in the collection, relevant dates, and note significant topics, themes, or formats. Use DACS 3.1 as content guidelines."
+  example: The collection contains household and personal items, early to mid-20th century, that belonged to Anna Ginsberg Hayutin. Most of the textiles in the collection were created by Anna herself and include a large number of table linens, bed linens, and doilies. Women's hats also feature prominently in the collection, and other items include collars, an ivory woman's toiletry set, women's jewelry, a jewelry box, three photo lapel pins, Anna's high school graduation autograph album, and a dictionary. (<a href="https://duarchives.coalliance.org/repositories/2/resources/511">cite</a>)
+  key: scopecontent
+
+- name: Separated Materials
+  description: Information about materials that are associated by provenance to the described materials but that have been physically separated or removed. Items may be separated for various reasons, including the dispersal of special formats to more appropriate custodial units; the outright destruction of duplicate or nonessential material; and the deliberate or unintentional scattering of fonds among different repositories.
+  required: false
+  rules: "<p>This field is intended to indicate the removal of archival materials from the collection being described, for the purposes of housing in another collection in Special Collections and Archives or preservation at another repository. Do not confuse with the Related Materials note, which refers to materials that are not physically or logically included in the material described in the finding aid but that may be of use to a reader because of an association to the described materials. Related materials are not related to the described material by provenance, accumulation, or use.</p><p>Materials deemed non-archival at the point of accession (typically non-unique monographs and serials) are noted as a group in the accession record.</p>"
+  example: "<p><ul><li>Photographs acquired with this accession were transferred to Pictorial Collections of The Bancroft Library, University of California, Berkeley.</li><li>The Weekender, a publication of The Weekend College (later of the Women's College), was removed and interfiled into U109, The Women's College Records, Box 12; the total publication span dates from 1982-2006.</li></ul></p>"
+  key: separatedmaterial

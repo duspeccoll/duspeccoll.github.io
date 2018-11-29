@@ -1,0 +1,30 @@
+# Jekyll configuration
+
+name: Special Collections Processing Manual
+owner: University of Denver Libraries
+description: Processing manual for all aspects of collection management at the University of Denver Libraries division of Special Collections and Archives, including arrangement, description, access, digitization, and preservation.
+logo: 'images/du_logo2.gif'
+
+# url is currently only used only for the RSS feed in feed.xml
+url: http://duspeccoll.github.io
+
+# baseurl will often be '', but for a project page on gh-pages, it needs to
+# be the project name.
+# *** IMPORTANT: If your local "jekyll serve" throws errors change this to '' or
+#     run it like so: jekyll serve --baseurl=''
+baseurl: ''
+
+# This can be '' to hide the Github nav button
+github: duspeccoll
+
+# Set this to your UA-# value, or '' to disable the block completely
+gaaccount: ''
+
+permalink: /:year/:month/:title
+
+highlighter: rouge
+markdown: redcarpet
+redcarpet:
+  extensions: ["tables", "with_toc_data"]
+
+exclude: ['README.md', 'LICENSE']

@@ -1,0 +1,117 @@
+- name: Title
+  description: The name of the accession.
+  required: true
+  rules: "The accession title should begin with the accession type and a colon, then a brief description of the materials contained within the accession or accrual, not more than a few words, then the call number of the collection to which the accession is disposed (if it is a single collection)."
+  key: "accession.title"
+
+- name: Identifier
+  description: A string uniquely identifying the accession, in sequence according to the year in which it was accessioned by the archives.
+  required: true
+  rules: "Each accession should be identified according to the year it was accessioned and the order in which the accession was made in that year. The two parts of the identifier are separated by a period; the second part is zero-padded to three digits. For example, the 20th accession of 2016 would have the identifier '2016.020'."
+  key: "accession.id_0"
+
+- name: Accession Date
+  description: The date on which the accession was processed into Special Collections and Archives. This is not necessarily its arrival or approval date.
+  required: true
+  rules: Defaults to the current date, but can be edited. See <a href="archivesspace/dates">here</a> for specific instructions on how to populate the date sub-form.
+  key: "accession.date"
+
+- name: Content Description
+  description: A brief outline of the materials contained within the accession.
+  required: false
+  rules: "Enter a brief, general description of the materials received in the accession.  Include here if the materials are an Accrual to an existing collection or part of a new collection, from whom materials were received (if applicable), and how the materials are related to existing University of Denver collecting areas."
+  example: "Accrual to School of Dentistry Records, U026.  One (1) black and white mounted photograph collage containing fourteen (14) headshots."
+  key: "accession.content_description"
+
+- name: Condition Description
+  description: A description of the physical condition of the materials contained within the accession.
+  required: false
+  key: "accession.condition_description"
+
+- name: Disposition
+  description: An indication of where the materials in the accession were distributed.
+  required: true
+  key: "accession.disposition"
+
+- name: Inventory
+  description: An itemized list of the materials received and appraised as part of the accession.
+  required: false
+  rules: "Use the Inventory field to provide itemized list of published materials or other bibliographic works."
+  key: "accession.inventory"
+
+- name: Provenance
+  description: The chain of custody of the materials contained within the accession.
+  required: false
+  rules: "Enter information regarding the ownership, collection, and donation of the materials received.  This is includes who collected the materials, who donated the materials, and any pertinent relationships to the University of Denver (i.e., Alum, Professor, etc.)"
+  example: "Photograph was discovered as part of the inventory in the archives collection of the American Association of Orthodontists library in St. Louis, Missouri and was mailed by the Librarian, Jackie Hittner, to the University of Denver Special Collections and Archives."
+  key: "accession.provenance"
+
+- name: General Note
+  description: Any notes about the accession that do not fit in the other basic information fields or sections of the accession record.
+  required: false
+  key: "accession.general_note"
+
+- name: Acquisition Type
+  description: A general term for the means by which Special Collections and Archives came to have custody of the accessioned materials.
+  required: false
+  rules: Select from the drop-down list.
+  key: "accession.acquisition_type"
+
+- name: Publish
+  description: Switch for publishing the record in the public user interface
+  required: false
+  rules: Ensure this box is checked if you wish for the record to appear in the public user interface
+  key: "accession.publish"
+
+- name: Linked Agents
+  description: Named entities responsible in some way for the accession's creation or custody transfer to Special Collections and Archives.
+  required: false
+  rules: Use the Linked Agents section of the record to indicate the source of the accession. To do so, set the <strong>Role</strong> field to "Source" before linking to the Agent via the linker. You may also link to the creator or subject of the accessioned materials, if you wish.
+  key: "accession.linked_agents"
+
+- name: "Agent Links: Role"
+  description: The high-level role played by the linked agent in the creation or manifestation of the archival materials being described.
+  required: true
+  rules: "<p>Select from the drop-down list:</p><p><ul><li>Creator</li><li>Source</li><li>Subject</li></ul></p><p>Use 'Source' to indicate the immediate source of the accessioned archival materials. Full provenance information for the archival materials may be recorded in the 'Provenance' field in the Basic Information section of the Accession record."
+  key: "accession.linked_agents.role"
+
+- name: "Agent Links: Relator"
+  description: The specific role played by the linked agent in the creation or manifestation of the archival materials being described.
+  required: false
+  rules: "Enter a term in the field. This field is populated by the <a href=\"http://www.loc.gov/marc/relators/relaterm.html\">MARC Relator Terms</a>; as you enter a term in the field, ArchivesSpace will look up and attempt to predict the term you are entering."
+  key: "accession.linked_agents.relator"
+
+- name: "Agent Links: Agents"
+  description: The agent responsible for the creation or manifestation of the archival materials being described.
+  required: true
+  rules: "Enter the name of the agent you wish to link, browse for the agent in the provided modal pane, or enter a new agent according to <a href=\"../local_authority\">local guidelines</a>."
+  key: "accession.linked_agents.ref"
+
+- name: Related Resources
+  description: Links to the records in ArchivesSpace representing the Resources/archival collections, if any, to which the accessioned materials were transferred.
+  required: false
+  rules: Required if the accession resulted in a transfer of materials into an archival collection managed in ArchivesSpace. Use the linker to search for and link the collection(s) to which accessioned materials were transferred.
+  key: "accession.related_resources"
+
+- name: "Collection Management: Processing Status"
+  description: The status of the represented materials in the accessioning workflow
+  required: true
+  rules: Select from the drop-down list. Use either "In Progress" or "Completed" to denote status.
+  key: "collection_management.processing_status"
+
+- name: "User Defined: Acquisition Price"
+  description: The price paid for the accession, if it was purchased.
+  required: false
+  rules: Use for materials purchases only.
+  key: "user_defined.real_1"
+
+- name: "User Defined: Acquisition Value"
+  description: The appraised monetary value of the accession.
+  required: false
+  key: "user_defined.real_2"
+
+- name: "User Defined: Accession Title Status"
+  description: The documentation status of the described accession; how it came to be in the custody of Special Collections and Archives.
+  required: true
+  rules: "Select from the drop-down list: <ul><li>Deed of Gift Pending</li><li>Deed of Gift Received</li><li>Monetary Gift</li><li>No Record</li><li>Other Documents</li><li>Transfer</li><li>University Property</li><li>Unknown</li></ul>"
+  key: "user_defined.enum_3"

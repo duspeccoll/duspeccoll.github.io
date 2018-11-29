@@ -1,0 +1,9 @@
+<ol class="breadcrumb">
+  <li><a href="{{ site.baseurl }}/">Home</a></li>&nbsp;>&nbsp;
+  {% if page.category %}
+    <li><a href="/{{ page.category | downcase }}">{{ page.category }}</a></li>&nbsp;>&nbsp;
+    <li>{{ page.title }}</li>
+  {% else %}
+    <li>{{ page.title }}</li>
+  {% endif %}
+</ol>

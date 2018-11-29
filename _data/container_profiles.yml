@@ -1,0 +1,24 @@
+- name: Name
+  description: The name of the container profiled; usually its generic product name.
+  required: true
+  rules: "When Top Container/Item synchronization is built into the <a href=\"https://github.com/duspeccoll/alma_integrations\">Alma Integrations</a>, the Container Profile name for each Top Container will map to its Item record's Internal Note 2.<br /><br />Include the dimensions when creating a Container Profile for a custom box or a box type whose size varies (such as a newspaper or pamphlet box). When creating a profile for a custom box, object, crate, or other container, refer to the <a href=\"#custom-labels\">profile naming conventions</a>."
+  example: "\"Standard record box\"<br />\"Letter document box\"<br />\"Newspaper box, 24 x 16 x 3 inches\""
+
+- name: URL
+  description: A link to the product home page or order form for the container profile being described.
+  required: false
+
+- name: Dimension Units
+  description: The unit of measurement for the Container Profile.
+  required: true
+  rules: "This should always be \"feet\" in order for the Extent Calculator to work properly."
+
+- name: Extent Dimension
+  description: The axis the Extent Calculator should use when calculating linear foot extent for the described Container Profile.
+  required: true
+  rules: Usually width, though varies depending on local practice for how the profiled container is stored in AAC or Hampden Center.
+
+- name: Depth
+  description: The extent to which the profiled container sits back on a shelf.
+  required: true
+  rules: "Round up to the nearest quarter foot. Express in decimal form (e.g. \"2.0\", \"0.5\")."

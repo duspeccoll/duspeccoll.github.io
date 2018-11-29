@@ -1,0 +1,116 @@
+- name: Publish
+  description: Switch for publishing the record in the public user interface
+  required: false
+  rules: Ensure this box is checked if you wish for the record to appear in the public user interface
+  key: "agent_corporate_entity.publish"
+
+- name: Dates of Existence
+  description: The dates during which the organization was active.
+  required: false
+  rules: This sub-form is used only with corporate entities, to indicate the dates during which it existed and was active under the name being authorized. The default label is "Existence" and should not be changed.
+  key: "agent_corporate_entity.dates_of_existence"
+
+- name: Name Forms
+  description: Forms of name by which the agent was known or referred.
+  required: true
+  rules: "<p>At least one form of name is required. If an agent was known or referred by more than one name in their lifetime or organizational history, multiple name forms may be assigned to the Agent record. All name forms should be entered according to the guidelines before. ArchivesSpace will automatically add punctuation to index and display names according to DACS and RDA guidelines.</p><p>One name form should be designated the Authorized and Display name. If taken from an existing authority file, this form should be the authorized form from that authority file. Note that the authorized and display forms are usually, though not always, the same.</p>"
+  key: "agent_corporate_entity.name_corporate_entity"
+
+- name: "Name Forms: Authorized"
+  description: The authorized form name for the described Person.
+  required: true
+  rules: One authorized form of name per agent. Exports as true or false.
+  key: "name_corporate_entity.is_authorized"
+
+- name: "Name Forms: Display Name"
+  description: The form of name which displays in metadata forms for objects to which the Person record is linked.
+  required: true
+  rules: One display name per agent. Exports as true or false.
+  key: "name_corporate_entity.is_display_name"
+
+- name: "Name Forms: Authority ID"
+  description: The uniquely identifying string used for the described agent, according to the authority file specified in the Source.
+  required: true
+  rules: Required if establishing against an existing authority file; if the source is local, the Authority ID is not required.
+  key: "name_corporate_entity.authority_id"
+
+- name: "Name Forms: Source"
+  description: The origin of the provided description for the Agent.
+  required: true
+  rules: Select from the drop-down list.
+  key: "name_corporate_entity.source"
+
+- name: "Name Forms: Rules"
+  description: The cataloging rules governing the creation of the Agent record.
+  required: true
+  rules: Select from the drop-down list. Usually DACS; sometimes RDA or Local Rules.
+  key: "name_corporate_entity.rules"
+
+- name: "Name Forms: Primary Form of Name"
+  description: The name of the highest-level organizational unit in a hierarchical name. For most Corporate Entities this will be the only name entered. Subordinate names are entered in the fields below.
+  required: true
+  example: University of Denver
+  key: "name_corporate_entity.primary_name"
+
+- name: "Name Forms: Subordinate Form 1"
+  description: The second-level organizational unit in a hierarchical name.
+  required: false
+  rules: Only provided if the corporate entity described is subordinate to or otherwise part of a larger organization.
+  example: University Libraries
+  key: "name_corporate_entity.subordinate_form_1"
+
+- name: "Name Forms: Subordinate Form 2"
+  description: The third-level organizational unit in a hierarchical name, plus any lower-level units.
+  required: false
+  rules: Only provided if the corporate entity described is sub-subordinate to a larger organization. If the corporate entity being described is a fourth-order unit in a larger organization (uncommon outside of federal agencies), record all names below the third level in this field, separating each with a period-space.
+  example: Special Collections and Archives
+  key: "name_corporate_entity.subordinate_form_2"
+
+- name: "Name Forms: Qualifier"
+  description: A geographic or functional term used to distinguish between two or more Agents who would otherwise share a name.
+  required: false
+  rules: This field is used to distinguish between two or more Agents who share a name, or to otherwise identify geographically an organization (i.e. a local chapter of a larger organization such as B'nai B'rith). When qualifying an organization geographically, enter according to DACS principles for abbreviating political geographic subdivisions such as states; that is, a qualifier for Denver would be entered "Denver, Colo."
+  example: Denver, Colo.
+  key: "name_corporate_entity.qualifier"
+
+- name: Contact Details
+  description: Contact information for the organization being described.
+  required: false
+  rules: "The Contact Details section allows for recording of contact information for any Agent in the database. It functions more or less as an address book, and can be used to maintain donor files within ArchivesSpace. It is at the discretion of the curator or accessioning archivist as to whether, and to what extent, this section should be filled out."
+  key: "agent_corporate_entity.contact_details"
+
+- name: Notes
+  description: Historical information about the organization being described.
+  required: false
+  rules: "<p>You may add a Biographical/Historical Note to provide contextual information about the organization being described, such as its business purpose or details about its founding, location, or management. You may also use the Citation sub-note type to provide citations for the information provided in the historical note.</p></p>To enter a historical note, use the provided Text sub-note form to enter the information you wish to include. To add a citation, click on the \"Add Sub Note\" button in the Notes sub-form, select \"Citation\" as the Note Type, then enter the citation information in the provided text field. If the citation is for an unauthorized form of name, provide the form in parentheses in the citation, e.g. <code>B333.01.0001.0001.00008 Lowenstein Family Holocaust Papers (Henry Lowenstein)</code>.</p><p>If you wish to provide a link directly to the cited material, you may enter that information in the \"Xlink\" sub-form; the label goes in the \"Title\" field, and the link in the \"Href\" field."
+  key: "agent_corporate_entity.notes"
+
+- name: Related Agents
+  description: An Agent in the ArchivesSpace name authority file that is linked in some way with the organization being described.
+  required: false
+  rules: "<p>You may add Related Agents links to an organizational record to indicate earlier or later forms of the organization; links to individuals who played prominent roles in the organization's history; or provide context for superior or subordinate agents within a larger organization, such as departments within a college. Related Agent links are bi-directional; that is, when you create a link in one record, it will automatically be created on the linked record as well.</p><p>Before creating a link to a related agent, ArchivesSpace will ask you for the specific type of relationship you are encoding. This affects the properties and values that the Related Agents sub-form will present to you. The options for this field are:</p><p><ul><li><strong>Associative Relationship</strong>, used for pairing organizations with individuals who were members thereof, or with peer organizations;</li><li><strong>Earlier/Later Relationship</strong>, used for organizational name or scope changes that require a separate authority record;</li><li><strong>Subordinate/Superior Relationship</strong>, used to indicate relative organizational hierarchy</li></ul></p>"
+  key: "agent_corporate_entity.related_agents"
+
+- name: "Related Agents: Relationship Type"
+  description: The type of relationship being encoded.
+  required: true
+  rules: "<p>Required if encoding a related agent link. The values are determined by the Relationship Type indicated by the user before the sub-form appears.</p><p>When assigning the type, its opposite will be assigned on the Related Agent link that is added to the linked record. For example, if a user were working on the authority record for Agent A, and created a Related Agent link to Agent B with the relationship type \"Earlier Form of Related,\" Agent B would automatically have a Related Agent link with the type \"Later Form of Related\" added to its record to link it back to Agent A.</p>"
+  key: "related_agents.relator"
+
+- name: "Related Agents: Related Agent"
+  description: The agent being linked to the organization being described.
+  required: true
+  rules: Required if encoding a related agent link. Select using the linker, either by searching for the agent or by browsing in the provided modal pane.
+  key: "related_agents.ref"
+
+- name: "Related Agents: Description"
+  description: A description of the agent relationship being encoded.
+  required: false
+  rules: "<p>Provide a brief yet detailed description of the relationship. Note that this field will appear in both of the linked records in the relationship. Take care to specify both agents by name when providing a description of their relationship.</p><p><ul><li><strong>Bad:</strong>Married 1947</li><li><strong>Good:</strong>Mark Smith and Mary Jones were married in 1947.</li></ul></p>"
+  key: "related_agents.description"
+
+- name: "Related Agents: Dates"
+  description: Dates during which the relationship was active.
+  required: false
+  rules: "You may provide the dates of the linked relationship if you wish. Use the \"Event\" label when doing so. For other fields in the sub-form, follow the guidance provided in the guidelines for <a href=\"dates\">encoding dates in ArchivesSpace</a>."
+  key: "related_agents.dates"

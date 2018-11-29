@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{site.baseurl}}/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{site.baseurl}}/css/theme.css">
+
+  <title>{{page.title}} | {{site.name}}</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="{{site.baseurl}}/">
+        <img alt="University of Denver" src="{{site.baseurl}}/{{site.logo}}"></img>
+        <span class="navbar-title">{{site.name}}</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="{{site.baseurl}}/accessions">Accessions</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{site.baseurl}}/arrangement">Arrangement</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{site.baseurl}}/description">Description</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{site.baseurl}}/digitization">Digitization</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>

@@ -1,0 +1,33 @@
+{% assign fields = content %}
+
+<p>Required fields will appear in bold.</p>
+
+<table class="table-fields">
+  {% for field in fields %}
+    {% if field.required %}
+      <tr class="table-field form-group required">
+        <td class="control-label" colspan="2">{{ field.name }}</td>
+      </tr>
+    {% else %}
+      <tr class="table-field form-group">
+        <td colspan="2">{{ field.name }}</td>
+      </tr>
+    {% endif %}
+    <tr>
+      <td>Description</td>
+      <td>{{ field.description }}</td>
+    </tr>
+    <tr>
+      <td>Local Rules</td>
+      <td>{{ field.rules }}</td>
+    </tr>
+    <tr>
+      <td>Examples</td>
+      <td>{{ field.example }}</td>
+    </tr>
+    <tr>
+      <td>ArchivesSpace Key</td>
+      <td>{{ field.key }}</td>
+    </tr>
+  {% endfor %}
+</table>

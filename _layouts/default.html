@@ -1,0 +1,11 @@
+{% include head.html %}
+
+<!-- Begin page content -->
+<div class="container page-container">
+  {% if page.url != "/" %}
+    {% include breadcrumb.html %}
+  {% endif %}
+  {{content}}
+</div>
+
+{% include foot.html %}

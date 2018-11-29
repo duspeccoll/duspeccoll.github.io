@@ -1,0 +1,37 @@
+- name: Portion
+  description: The extent of the described Resource or Archival Object covered by the extent being encoded.
+  required: true
+  rules: "Select either 'Part' or 'Whole'. Whole represents the entirety of the described Resource or Archival Object; Part represents only a portion thereof, and should be used in conjunction with other Extent sub-forms to measure the whole of the described Resource or Archival Object."
+  key: "extent.portion"
+
+- name: Number
+  description: The amount of material being described by the extent being encoded, in conjunction with its assigned Type.
+  required: true
+  rules: "This number is paired with the corresponding Type. For example, if you are encoding separate Extents for Items and Gigabytes, you would add two Extents to the record, each with separate Number/Type property/value pairs."
+  key: "extent.number"
+
+- name: Type
+  description: The unit of measurement for the extent being encoded.
+  required: true
+  rules: Select from the drop-down list.
+  key: "extent.extent_type"
+
+- name: Container Summary
+  description: An optional summary of the physical containers in which the Resource materials are stored.
+  required: false
+  rules: "In the note field, include a qualifying count/description in parentheses following the unit description. If there are more than two types of containers, record the quantity of containers/boxes only. When describing the type of material in the note field, use the appropriate thesauri for the material type."
+  example: "<ul><li>60 letter document boxes</li><li>6 record boxes, 12 letter document boxes</li><li>1 photograph</li><li>23 pastels (visual works)</li></ul>"
+  key: "extent.container_sumamry"
+
+- name: Physical Details
+  description: Information about the physical nature of the materials being described, such as the material with which they were made, or a brief condition statement.
+  required: false
+  example: "<ul><li>fair condition, corners torn</li><li>leather, metal; good condition</li></ul>"
+  key: "extent.physical_details"
+
+- name: Dimensions
+  description: The units of measurement of the archival object for which the extent is encoded.
+  required: false
+  rules: Encode in the form 'n x n x n [unit].'
+  example: "24 x 20 centimeters"
+  key: "extent.dimensions"

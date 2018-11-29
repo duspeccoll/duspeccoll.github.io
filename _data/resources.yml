@@ -1,0 +1,124 @@
+- name: Title
+  description: The name of the archival object being described.
+  required: true
+  key: "resource.title"
+
+- name: Identifier
+  description: The unique call number assigned to the Resource, derived from the Special Collections and Archives collecting area to which it belongs and the order in which the collection arrived within that collecting area.
+  required: true
+  rules: Identifiers are generated automatically by ArchivesSpace when an archivist uses the Next Resource plugin to create brief Resource records.
+  key: "resource.id_0"
+
+- name: Level of Description
+  description: The hierarchical level of the archival object being described.
+  required: true
+  rules: Select from the drop-down list. Boxes and folders are both classified as "files." Sub-items are classified as "items."
+  key: "resource.level"
+
+- name: Language
+  description: The language in which the materials are expressed.
+  required: true
+  rules: "Not required for visual resources where no text is present. Languages are drawn from the <a href=\"https://www.loc.gov/standards/iso639-2/php/code_list.php\">ISO 639-2 Language Code List</a>. If the described materials are expressed in more than one language, select 'Multiple Languages' from the list and add a 'Language of Materials' note to indicate the specific languages found in the materials."
+  key: "resource.language"
+
+- name: Publish
+  description: Switch for publishing the record in the public user interface
+  required: false
+  rules: Ensure this box is checked if you wish for the record to appear in the public user interface
+  key: "resource.publish"
+
+- name: Restrictions Apply
+  description: Switch for indicating whether access or use restrictions apply to the archival materials being described
+  required: false
+  rules: Ensure this box is checked if you wish for the public user interface to indicate that restrictions apply to the materials, so that a user may contact the Special Collections and Archives reference desk for further details.
+  key: "resource.restrictions_apply"
+
+- name: Repository Processing Note
+  description: Details about the processing, cataloging, digitization, or other curation activity being undertaken with relation to the archival materials being described.
+  required: false
+  rules: Use this note field to provide information about the curation of archival materials that you wish for other archivists to be aware of, but that should not be made available in the public user interface. We run reports on this field to identify problem records in the archives requiring additional curation attention.
+  key: "resource.repository_processing_note"
+
+- name: Dates
+  description: Dates related to the archival materials being described.
+  required: true
+  rules: Consult the guidelines for <a href="dates">entering Dates in ArchivesSpace</a>. Resources may have separate dates for Inclusive and Bulk Dates provided. Inclusive dates represent the entirety of the collection; the Bulk Dates range is smaller, and represents a date range covering the vast majority (80% is a good rule of thumb) of the described materials.
+  key: "resource.dates"
+
+- name: Extents
+  description: The amount of archival materials being described, in the specified unit of measurement (items, linear feet, etc.)
+  required: true
+  rules: Consult the guidelines for <a href="extents">entering Extents in ArchivesSpace</a>. Extents may be automatically calculated for Resources, if all of their linked Top Containers have had Container Profiles attached; for more information, see the documentation on <a href="#extent-calculator">using the Extent Calculator</a>.
+  key: "resource.extents"
+
+- name: Agent Links
+  description: Links to people, organizations, and families whose records are managed in the ArchivesSpace authority file and who are creators, subjects, and/or sources of the archival materials being described.
+  required: false
+  rules: Link to any people, organizations, or families related to the archival materials using the Agent Links sub-form. You may link to as many agents as required to fully describe the archival materials. Note that the role selected in this section affects how the metadata is represented in MARC and MODS; if, for example, the same agent is both creator and subject of the archival materials being described, you may link to that agent twice -- once for each role.
+  key: "resource.linked_agents"
+
+- name: "Agent Links: Role"
+  description: The high-level role played by the linked agent in the creation or manifestation of the archival materials being described.
+  required: true
+  rules: "<p>Select from the drop-down list:</p><p><ul><li>Creator</li><li>Source</li><li>Subject</li></ul></p>"
+  key: "linked_agents.role"
+
+- name: "Agent Links: Relator"
+  description: The specific role played by the linked agent in the creation or manifestation of the archival materials being described.
+  required: false
+  rules: "Enter a term in the field. This field is populated by the <a href=\"http://www.loc.gov/marc/relators/relaterm.html\">MARC Relator Terms</a>; as you enter a term in the field, ArchivesSpace will look up and attempt to predict the term you are entering."
+  key: "linked_agents.relator"
+
+- name: "Agent Links: Agents"
+  description: The agent responsible for the creation or manifestation of the archival materials being described.
+  required: true
+  rules: "Enter the name of the agent you wish to link, browse for the agent in the provided modal pane, or enter a new agent according to <a href=\"../local_authority\">local guidelines</a>."
+  key: "linked_agents.ref"
+
+- name: "Subjects"
+  description: The topical, genre, uniform title, or geographic headings that describe or provide coverage for the archival materials being described.
+  required: false
+  rules: Enter the terms you wish to link to the archival materials. This field is repeatable. The linker provides first term types for each term that appears, to aid in disambiguation between identical terms whose types are different.
+  key: "resource.subjects.ref"
+
+- name: Notes
+  description: Contextual, organizational, or other details about the archival materials being described.
+  required: true
+  rules: Provide as many notes as seems necessary to fully describe the archival materials, in line with the local guidelines for description of archival materials.
+  example: <a href="notes">ArchivesSpace Notes guidelines</a>
+  key: "resource.notes"
+
+- name: "External Documents: Title"
+  description: The label applied to a link outside of ArchivesSpace to material providing additional context about the archival materials being described.
+  required: false
+  rules: External Documents are used in ArchivesSpace to provide links to outside resource which may be helpful to a user in learning more about that resource.
+  key: "resource.external_document.title"
+
+- name: "External Documents: Location"
+  description: "The place where an external document may be found. Generally this is a URL for a website."
+  required: false
+  key: "resource.external_document.location"
+
+- name: Instances
+  description: Carriers of the information represented within the archival materials being described, whether physical or digital in nature.
+  required: false
+  rules: "<p>For physical containers of archival material that have a barcode and circulate using the library management system, see <a href=\"top_containers\">Top Containers</a>.</p><p>For digital manifestations of digitized or born-digital materials, see <a href=\"digital_objects\">Digital Objects</a>.</p>"
+  key: "resource.instances"
+
+- name: "User Defined: Alma MMS ID"
+  description: The Alma-assigned identifier for the MARC representation of the Resource, as it is managed in the library management system.
+  required: true
+  rules: When you use the <a href="https://github.com/duspeccoll/alma_integrations">Alma Integrations</a> plugin to push a Resource MARC record to Alma, or create a bibliographic record for a Resource manually in the Metadata Editor, Alma will generate a unique MMS ID for that record. To enable the Alma Integrations to successfully connect the ArchivesSpace and Alma representations of a Resource, this field must be populated with the correct MMS ID as soon as it is generated.
+  key: "user_defined.string_2"
+
+- name: "User Defined: OCLC Number"
+  description: The unique identifier generated by OCLC to represent the archival collection in <a href="http://worldcat.org">WorldCat</a>.
+  required: false
+  rules: Enter this if it is known and available.
+  key: "user_defined.string_3"
+
+- name: "User Defined: Resource Metadata Level"
+  description: The assigned <a href="../description">cataloging level</a> for the archival collection being described.
+  required: true
+  rules: Consult with curators and/or the Digital Collections Librarian before assigning.
+  key: "user_defined.enum_1"
